@@ -1,0 +1,10 @@
+<%= simple_form_for @task, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :description %>
+  <%= error_span(@task[:description]) %>
+  <%= f.input :list_id %>
+  <%= error_span(@task[:list_id]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                tasks_path, :class => 'btn btn-default' %>
+<% end %>

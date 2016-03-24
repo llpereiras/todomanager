@@ -1,0 +1,9 @@
+<%= simple_form_for @list, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <label class="select optional control-label" for="list_description">Description</label>
+  <%= f.text_area :description,  {:class=>"form-control", :rows=>"5", :style=>'margin-left: -10px; margin-right: 16px;'} %>
+  <%= f.input :visibility, :as => :select, :collection => List.visibilities.keys.to_a.map { |w| [w.humanize, w] } %>
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                lists_path, :class => 'btn btn-default' %>
+<% end %>
