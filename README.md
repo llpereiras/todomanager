@@ -1,4 +1,5 @@
-# List Manager #
+# todomanager
+Manager your tasks online
 
 ## This is a project to manager your lists.
 
