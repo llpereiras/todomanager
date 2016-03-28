@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "Lists", :type => :request do
-  describe "GET /lists" do
+RSpec.describe "Tasks", :type => :request do
+  describe "GET /tasks" do
     it "works! (now write some real specs)" do
-      get lists_path
+      get tasks_path
       expect(response.status).to be(200)
     end
   end

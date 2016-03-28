@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe List, :type => :model do
+RSpec.describe Task, :type => :model do
   before (:all) do
     DatabaseCleaner.clean_with(:deletion)
   end
@@ -9,10 +9,11 @@ RSpec.describe List, :type => :model do
     context "Quando envia os parâmetros necessários e válidos" do
       context "Então efetua o cadastro com sucesso" do
         it do
-          list = List.new
-          list.description = Faker::Lorem.words(10).join(' ')
-          expect(list.save).to be(true)
-          list.destroy
+          task = Task.new
+          task.list = FactoryGirl.create(:list)
+          task.description = Faker::Lorem.words(10).join(' ')
+          expect(task.save).to be(true)
+          task.destroy
         end
       end
     end
@@ -22,9 +23,9 @@ RSpec.describe List, :type => :model do
     context "Quando envia os parâmetros invalidos" do
       context "Então nao efetua o cadastro" do
         it do
-          list = List.new
-          expect(list.save).to be(false)
-          list.destroy
+          task = Task.new
+          expect(task.save).to be(false)
+          task.destroy
         end
       end
     end

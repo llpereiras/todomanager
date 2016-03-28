@@ -1,0 +1,82 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ptBR:
+  hello: "Olá Mundo"
+  not_authorized: "Você não tem autorização para acessar este recurso"
+  access_denied: "Acesso negado!"
+  active_admin:
+    dashboard: "Dashboard"
+    dashboard_welcome:
+      welcome: "Bem vindo"
+      call_to_action: "Call to action"
+    powered_by: "Feito por"
+
+  select_tipo_evento_default: "Selecione o tipo do evento"
+  select_perfil_default: "Selecione o perfil do usuario"
+  time:
+    formats:
+      submitted: "%b %d %Y"
+      default: "%d/%m/%Y"
+
+  attributes:
+    created_at: "Criado"
+    updated_at: "Editado"
+  activerecord:
+      errors:
+        template:
+          header:
+            count: "Impossível realizar o registro de %{model}: %{count} erro(s) encontrado(s)."
+          body: "Por favor, verifique seguintes campos :"
+        messages:
+          inclusion: "não está incluída na lista"
+          exclusion: "não disponível"
+          invalid: "não é válido"
+          confirmation: "não coincide com a confirmação"
+          accepted: "deve ser aceita(s)"
+          empty: "deve ser preenchida(s)"
+          blank: "deve ser preenchida(s)"
+          too_long: "é muito longo (não mais de {{count}} caracteres)"
+          too_short: "é muito curto (pelo menos {{count}} caracteres)"
+          wrong_length: "não é o comprimento certo (deve ter {{count}} caracteres)"
+          taken: "não disponível"
+          not_a_number: "não é um número"
+          greater_than: "deve ser maior do que {{count}}"
+          greater_than_or_equal_to: "deve ser maior do que ou igual à {{count}}"
+          equal_to: "deve ser igual à {{count}}"
+          less_than: "deve ser inferior à {{count}}"
+          less_than_or_equal_to: "deve ser inferior ou igual à {{count}}"
+          odd: "deve ser impar"
+          even: "deve ser par"
+        models:
+          usuario:
+            attributes:
+              nome:
+                blank: "Nome não pode ser nulo."
+              email:
+                blank: "não pode ser nulo."
+                invalid: "inválido!"
+                taken: "Usuário já existe!"
+              user_duplicate_email:
+                taken: "Usuário já existe!"
+              password:
+                blank: "não pode ser nula."
+                confirmation: "e confirmacao não conferem. Por favor digite novamente."

@@ -7,7 +7,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:public) %></th>
+      <th><%= model_class.human_attribute_name(:visibility) %></th>
       <th><%= model_class.human_attribute_name(:user_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -18,7 +18,7 @@
       <tr>
         <td><%= link_to list.id, list_path(list) %></td>
         <td><%= list.description %></td>
-        <td><%= list.public %></td>
+        <td><%= list.visibility %></td>
         <td><%= list.user_id %></td>
         <td><%=l list.created_at %></td>
         <td>

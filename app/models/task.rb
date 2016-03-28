@@ -4,12 +4,6 @@ class Task < ActiveRecord::Base
   validates :description, presence: true
   validates :list_id, presence: true
 
-  def initialize(options = {})
-    options.each_pair do |n, v|
-      public_send("#{n}=", v)
-    end
-  end
-
   def push
     self.class.push self
     self
