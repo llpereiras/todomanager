@@ -14,10 +14,10 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem "responders"
 gem 'puma'
-gem 'websocket-rails'
 gem 'haml-rails'
 gem 'momentjs-rails'
-gem 'thin'
+gem 'websocket-rails'
+# gem 'websocket-rails-js', github: 'websocket-rails/websocket-rails-js', branch: 'sub_protocols'
 
 
 group :development, :test do
@@ -28,9 +28,4 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'json-schema'
   gem 'parallel_tests'
-end
-
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
 end

@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require moment
-//= require_tree .
+//= require websocket_rails/main
+//= require bootstrap
+//= require message_app
