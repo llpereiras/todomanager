@@ -14,7 +14,7 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem "responders"
 gem 'puma'
-gem 'faye-rails'
+gem 'websocket-rails'
 gem 'haml-rails'
 gem 'momentjs-rails'
 gem 'thin'

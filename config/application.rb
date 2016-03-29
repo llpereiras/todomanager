@@ -1,8 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require "net/http"
-
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -14,12 +12,6 @@ module TodoManager
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
-
-    config.middleware.delete Rack::Lock
-    config.middleware.use FayeRails::Middleware, mount: '/faye', :timeout => 25 do
-      map '/news' => RealtimeNewsController
-      map default: :block
-    end
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
