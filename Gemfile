@@ -17,8 +17,6 @@ gem 'puma'
 gem 'haml-rails'
 gem 'momentjs-rails'
 gem 'websocket-rails'
-# gem 'websocket-rails-js', github: 'websocket-rails/websocket-rails-js', branch: 'sub_protocols'
-
 
 group :development, :test do
   gem 'byebug'

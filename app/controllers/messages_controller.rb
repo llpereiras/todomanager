@@ -1,18 +1,7 @@
 class MessagesController < WebsocketRails::BaseController
-  # def initialize_session
-  #   # perform application setup here
-  #   controller_store[:message_count] = 0
-  # end
-
   def user_connected
     puts 'user connected'
-    # broadcast_message :client_connected, {:message => "Hello"}
-    broadcast_message :client_connected, {:tasks_count => List.count + 10}
-  end
-
-
-  def incoming_message
-    broadcast_message :new_message, {:user => current_user.screen_name, :text => message[:text]}
+    WebsocketRails['meu_canal'].trigger(:new_message, {:tasks_count => List.count + 10})
   end
 
 end
