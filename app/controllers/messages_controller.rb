@@ -6,7 +6,8 @@ class MessagesController < WebsocketRails::BaseController
 
   def user_connected
     puts 'user connected'
-    broadcast_message :client_connected, {:message => "Hello"}
+    # broadcast_message :client_connected, {:message => "Hello"}
+    broadcast_message :client_connected, {:tasks_count => List.count + 10}
   end
 
 
